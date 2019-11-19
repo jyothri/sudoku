@@ -1,13 +1,13 @@
 package com.jkurapati.sudoku.solve;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class TestSolution {
 
-  @Test
-  public void sayHello() {
-    assertEquals("Solved again!", new Solution().sayHello());
-  }
+    @Test
+    public void sayHello() {
+        assertEquals("Solved again!", new Solution().sayHello());
+    }
 }

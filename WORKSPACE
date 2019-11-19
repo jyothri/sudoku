@@ -15,13 +15,13 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 maven_install(
     artifacts = [
         "junit:junit:4.12",
-        "org.hamcrest:hamcrest-library:1.3",
+        "org.apache.commons:commons-lang3:3.9",
+		"org.openjfx:javafx-controls:mac:11.0.1",
+		"org.openjfx:javafx-graphics:mac:11.0.1",
+		"org.openjfx:javafx-base:mac:11.0.1",
+        "org.openjfx:javafx-fxml:mac:11.0.1",
     ],
     repositories = [
-        # Private repositories are supported through HTTP Basic auth
-        "http://username:password@localhost:8081/artifactory/my-repository",
-        "https://jcenter.bintray.com/",
-        "https://maven.google.com",
         "https://repo1.maven.org/maven2",
     ],
 )
