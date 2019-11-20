@@ -16,7 +16,7 @@ java_binary(
         "@maven//:org_openjfx_javafx_fxml_mac",
         ":SearchController",
     ],
-    resources = ["SearchController.fxml"],
+    resources = ["SearchController.fxml", "search.css"],
 )
 
 java_library(

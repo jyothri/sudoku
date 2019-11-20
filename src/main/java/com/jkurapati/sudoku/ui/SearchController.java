@@ -15,6 +15,5 @@ public class SearchController {
         // search panel
         searchButton.setText("Search");
 //        searchButton.setOnAction(event -> loadData());
-        searchButton.setStyle("-fx-background-color: #457ecd; -fx-text-fill: #ffffff;");
     }
 }

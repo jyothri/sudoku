@@ -21,6 +21,8 @@ public class SudokuUI extends Application {
         AnchorPane page = (AnchorPane) loader.load();
         Scene scene = new Scene(page);
 
+        scene.getStylesheets().add("/com/jkurapati/sudoku/ui/search.css");
+
         primaryStage.setTitle("Title goes here");
         primaryStage.setScene(scene);
         primaryStage.show();
