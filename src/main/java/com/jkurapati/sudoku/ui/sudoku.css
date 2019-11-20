@@ -1,4 +1,23 @@
 .button {
-    -fx-background-color: red;
+    -fx-background-color: blue;
     -fx-text-fill: white;
+}
+
+.innerGridPane {
+
+}
+
+.cell {
+    -fx-min-width: 10;
+    -fx-min-height: 30;
+    -fx-max-width: 40;
+    -fx-max-height: 30;
+    -fx-alignment: center;
+}
+
+#outerGridPane {
+    -fx-background-color: black;
+    -fx-vgap: 2px;
+    -fx-hgap: 2px;
+    -fx-padding: 0px;
 }
