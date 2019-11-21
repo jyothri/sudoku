@@ -11,8 +11,9 @@ import java.util.concurrent.Executors;
  */
 public final class Board {
     private static final int SUDOKU_DIMENSION = 3;
+    private static final int SQUARE_OF_DIMENSION = SUDOKU_DIMENSION * SUDOKU_DIMENSION;
 
-    private final int[][] matrix = new int[SUDOKU_DIMENSION][SUDOKU_DIMENSION];
+    private final int[][] matrix = new int[SQUARE_OF_DIMENSION][SQUARE_OF_DIMENSION];
     private final List<Observable> listeners = new ArrayList<>();
     private final ExecutorService exec;
 
