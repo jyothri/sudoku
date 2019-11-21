@@ -4,9 +4,9 @@ java_library(
     name = "Solution",
     srcs = ["Solution.java"],
     deps = [
-        "@maven//:org_apache_commons_commons_lang3",
         ":Board",
-    ]
+        "@maven//:org_apache_commons_commons_lang3",
+    ],
 )
 
 java_library(
@@ -14,12 +14,12 @@ java_library(
     srcs = ["Board.java"],
     deps = [
         ":Observable",
-    ]
+    ],
 )
 
 java_library(
     name = "Observable",
     srcs = ["Observable.java"],
     deps = [
-    ]
+    ],
 )
