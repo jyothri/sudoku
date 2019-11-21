@@ -18,7 +18,7 @@ public final class Board {
     private final ExecutorService exec;
 
     public Board() {
-        exec = Executors.newCachedThreadPool();
+        exec = Executors.newSingleThreadExecutor();
     }
 
     /**
