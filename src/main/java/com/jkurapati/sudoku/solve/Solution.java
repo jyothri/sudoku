@@ -24,6 +24,8 @@ class Solution {
     private void backtrack() {
         int[][] matrix = board.getMatrix();
         backtrackHelper(matrix, 0, 0);
+        System.out.println("Accurate matrix:::");
+        Arrays.stream(matrix).forEach(row -> System.out.println(Arrays.toString(row)));
     }
 
     private boolean backtrackHelper(int[][] matrix, int rowPos, int colPos) {
@@ -36,15 +38,14 @@ class Solution {
         if (matrix[rowPos][colPos] == 0) {
             for (int i = 1; i < (SQUARE_OF_DIMENSION + 1); i++) {
                 matrix[rowPos][colPos] = i;
-                board.setCellValue(rowPos, colPos, i);
                 if (valid(matrix, rowPos, colPos)) {
+                    board.setCellValue(rowPos, colPos, i);
                     if (backtrackHelper(matrix, nextRowPos, nextColPos)) {
                         return true;
                     }
                 }
             }
             matrix[rowPos][colPos] = 0;
-            board.setCellValue(rowPos, colPos, 0);
             return false;
         }
         return backtrackHelper(matrix, nextRowPos, nextColPos);
@@ -79,8 +80,8 @@ class Solution {
 
         //Check block
         Arrays.fill(mask, false);
-        int rowBegin = row / SUDOKU_DIMENSION;    // 0,1,2 / 3 = 0;  3,4,5 / 3 = 1; etc
-        int colBegin = row / SUDOKU_DIMENSION;
+        int rowBegin = (row / SUDOKU_DIMENSION) * SUDOKU_DIMENSION;    // 0,1,2 / 3 = 0;  3,4,5 / 3 = 1; etc
+        int colBegin = (col / SUDOKU_DIMENSION) * SUDOKU_DIMENSION;
         for (int i = rowBegin; i < (rowBegin + SUDOKU_DIMENSION); i++) {
             for (int j = colBegin; j < (colBegin + SUDOKU_DIMENSION); j++) {
                 int cellValue = matrix[i][j];
