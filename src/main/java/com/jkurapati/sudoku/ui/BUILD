@@ -13,10 +13,6 @@ java_binary(
         "sudoku.css",
     ],
     deps = [
-        ":SearchController",
-        "@maven//:org_apache_commons_commons_lang3",
-        "@maven//:org_openjfx_javafx_base_mac",
-        "@maven//:org_openjfx_javafx_controls_mac",
         "@maven//:org_openjfx_javafx_fxml_mac",
         "@maven//:org_openjfx_javafx_graphics_mac",
     ],
@@ -26,8 +22,6 @@ java_library(
     name = "SearchController",
     srcs = ["SearchController.java"],
     deps = [
-        "@maven//:org_apache_commons_commons_lang3",
-        "@maven//:org_openjfx_javafx_base_mac",
         "@maven//:org_openjfx_javafx_controls_mac",
         "@maven//:org_openjfx_javafx_fxml_mac",
         "@maven//:org_openjfx_javafx_graphics_mac",

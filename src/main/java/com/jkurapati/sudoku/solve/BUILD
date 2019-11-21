@@ -3,10 +3,7 @@ package(default_visibility = ["//src/test/java/com/jkurapati/sudoku/solve:__pkg_
 java_library(
     name = "Solution",
     srcs = ["Solution.java"],
-    deps = [
-        ":Board",
-        "@maven//:org_apache_commons_commons_lang3",
-    ],
+    deps = [":Board"],
 )
 
 java_library(
